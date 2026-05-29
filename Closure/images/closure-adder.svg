@@ -1,0 +1,41 @@
+<svg width="940" height="560" viewBox="0 0 940 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Adder closure example</title>
+  <desc id="desc">Two calls to adder create two different closures, one remembering 5 and another remembering 10.</desc>
+  <rect width="940" height="560" fill="#f8fafc"/>
+  <text x="470" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#111827">Each Closure Has Its Own Memory</text>
+  <text x="470" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4b5563">Calling the outer function multiple times creates separate remembered values.</text>
+
+  <rect x="70" y="125" width="250" height="112" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="195" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d4ed8">adder(5)</text>
+  <text x="110" y="198" font-family="Consolas, monospace" font-size="18" fill="#111827">num = 5</text>
+
+  <rect x="620" y="125" width="250" height="112" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+  <text x="745" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#047857">addTo5</text>
+  <text x="660" y="198" font-family="Consolas, monospace" font-size="18" fill="#111827">remembers 5</text>
+
+  <rect x="70" y="318" width="250" height="112" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="195" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#5b21b6">adder(10)</text>
+  <text x="110" y="391" font-family="Consolas, monospace" font-size="18" fill="#111827">num = 10</text>
+
+  <rect x="620" y="318" width="250" height="112" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="745" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#92400e">addTo10</text>
+  <text x="660" y="391" font-family="Consolas, monospace" font-size="18" fill="#111827">remembers 10</text>
+
+  <path d="M320 181 C430 181 510 181 620 181" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M320 374 C430 374 510 374 620 374" fill="none" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrowPurple)"/>
+
+  <rect x="362" y="258" width="216" height="48" rx="24" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="470" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#334155">Separate closures</text>
+
+  <text x="470" y="490" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#111827">addTo5(2) = 7     addTo10(10) = 20     addTo5(2) = 7</text>
+  <text x="470" y="522" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4b5563">The first closure does not forget 5, even after another closure remembers 10.</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>

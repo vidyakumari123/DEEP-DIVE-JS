@@ -1,0 +1,34 @@
+<svg width="940" height="520" viewBox="0 0 940 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">JavaScript closure basic idea</title>
+  <desc id="desc">An outer function creates a variable, an inner function uses it, and the returned inner function remembers that variable.</desc>
+  <rect width="940" height="520" fill="#f8fafc"/>
+  <text x="470" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#111827">Closure: Inner Function Remembers Outer Variables</text>
+  <text x="470" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4b5563">A closure is created when a function keeps access to variables from its outer function.</text>
+
+  <rect x="70" y="126" width="310" height="190" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="225" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d4ed8">Outer function</text>
+  <text x="105" y="200" font-family="Consolas, monospace" font-size="17" fill="#111827">function adder(num) {</text>
+  <text x="128" y="232" font-family="Consolas, monospace" font-size="17" fill="#111827">num = 5</text>
+  <text x="128" y="264" font-family="Consolas, monospace" font-size="17" fill="#111827">return add;</text>
+  <text x="105" y="296" font-family="Consolas, monospace" font-size="17" fill="#111827">}</text>
+
+  <rect x="560" y="126" width="310" height="190" rx="8" fill="#ffffff" stroke="#059669" stroke-width="3"/>
+  <text x="715" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#047857">Inner function</text>
+  <text x="595" y="200" font-family="Consolas, monospace" font-size="17" fill="#111827">function add(b) {</text>
+  <text x="618" y="232" font-family="Consolas, monospace" font-size="17" fill="#111827">console.log(num + b)</text>
+  <text x="595" y="264" font-family="Consolas, monospace" font-size="17" fill="#111827">}</text>
+  <text x="595" y="296" font-family="Arial, sans-serif" font-size="15" fill="#065f46">Uses num from outer function</text>
+
+  <path d="M380 220 C445 220 495 220 560 220" fill="none" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrowPurple)"/>
+  <text x="470" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#5b21b6">remembered by closure</text>
+
+  <rect x="250" y="372" width="440" height="76" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="470" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#92400e">Returned function still has access to num</text>
+  <text x="470" y="430" text-anchor="middle" font-family="Consolas, monospace" font-size="17" fill="#111827">const addTo5 = adder(5); addTo5(2); // 7</text>
+
+  <defs>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>
